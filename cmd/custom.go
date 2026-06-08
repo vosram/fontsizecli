@@ -11,6 +11,7 @@ import (
 	"strings"
 
 	"github.com/spf13/cobra"
+	"github.com/vosram/fontsizecli/internal/utils"
 )
 
 // customCmd represents the custom command
@@ -58,7 +59,7 @@ font size either as the base being the height value or the lowest value.`,
 			}
 			fmt.Println(content)
 			if outputName != "" {
-				err := saveResultToFile(outputName, content)
+				err := utils.SaveResultToFile(outputName, content)
 				if err != nil {
 					return err
 				}
@@ -80,7 +81,7 @@ font size either as the base being the height value or the lowest value.`,
 		}
 		fmt.Println(content)
 		if outputName != "" {
-			err := saveResultToFile(outputName, content)
+			err := utils.SaveResultToFile(outputName, content)
 			if err != nil {
 				return err
 			}
