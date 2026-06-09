@@ -1,6 +1,3 @@
-/*
-Copyright © 2026 NAME HERE <EMAIL ADDRESS>
-*/
 package cmd
 
 import (
@@ -14,7 +11,6 @@ import (
 	"github.com/vosram/fontsizecli/internal/utils"
 )
 
-// customCmd represents the custom command
 var customCmd = &cobra.Command{
 	Use:   "custom <\"h\" | \"l\"> <base-font-size> <ratio> <num-of-steps>",
 	Short: "Create a set of font sizes based on a ratio",
@@ -93,13 +89,5 @@ font size either as the base being the height value or the lowest value.`,
 func init() {
 	rootCmd.AddCommand(customCmd)
 
-	// Here you will define your flags and configuration settings.
-
-	// Cobra supports Persistent Flags which will work for this command
-	// and all subcommands, e.g.:
-	// customCmd.PersistentFlags().String("foo", "", "A help for foo")
-
-	// Cobra supports local flags which will only run when this command
-	// is called directly, e.g.:
 	customCmd.Flags().StringP("output", "o", "", "filename to save the output to, .txt is added automatically")
 }

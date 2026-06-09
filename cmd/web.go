@@ -1,6 +1,3 @@
-/*
-Copyright © 2026 NAME HERE <EMAIL ADDRESS>
-*/
 package cmd
 
 import (
@@ -11,7 +8,6 @@ import (
 	"github.com/vosram/fontsizecli/internal/utils"
 )
 
-// webCmd represents the web command
 var webCmd = &cobra.Command{
 	Use:   "web <base-size> <ratio>",
 	Short: "Create a set of fonts for h1-h6, p, smp, and xsmp",
@@ -80,14 +76,6 @@ var webCmd = &cobra.Command{
 func init() {
 	rootCmd.AddCommand(webCmd)
 
-	// Here you will define your flags and configuration settings.
-
-	// Cobra supports Persistent Flags which will work for this command
-	// and all subcommands, e.g.:
-	// webCmd.PersistentFlags().String("foo", "", "A help for foo")
-
-	// Cobra supports local flags which will only run when this command
-	// is called directly, e.g.:
 	webCmd.Flags().StringP("output", "o", "", "Name for output file. Extension .txt is automatically added")
 	webCmd.Flags().Float64("mob-ratio", 0, "Ratio for mobile sizes")
 	webCmd.Flags().Int("mob-base", 0, "Mobile base font size")
